@@ -1,0 +1,162 @@
+@import 'variables';
+
+#footer {
+  position: absolute;
+  left: 0;
+  width: 100vw;
+  height: 550px;
+  background: rgba(20,52,94,1);
+  background-image: linear-gradient(to bottom, rgba(20,52,94,1) 0%, rgba(0,161,215,1) 100%);
+  .inside {
+    height: 100%;
+    background: url('../layout/herz-big.png') no-repeat center 50px/50%;
+    .ce_gallery {
+      width: 90%;
+      max-width: 1000px;
+      margin: 0 auto;
+      ul {
+        display: flex;
+        justify-content: space-between;
+        position: absolute;
+        top: -40px;
+        width: 200px;
+        li {
+          width: 45%;
+        }
+      }
+    }
+    .mod_customnav {
+       position: relative;
+       width: 370px;
+       margin: 60px auto 0;
+       text-align: center;
+       z-index: 1;
+       li {
+         padding: 8px 0;
+         &:not(:last-child) {
+           border-bottom: 1px solid white;
+         }
+         a, strong {
+           text-decoration: none;
+           text-transform: uppercase;
+           color: white;
+         }
+         a {
+           display: inline-block;
+           position: relative;
+           &:before {
+             opacity: 0;
+             content: '';
+             position: absolute;
+             left: 0;
+             top: 7px;
+             width: 10px;
+             height: 10px;
+             background: url('../layout/herz-white.svg') no-repeat;
+             transition: opacity 250ms, left 250ms;
+           }
+           &:after {
+             opacity: 0;
+             content: '';
+             position: absolute;
+             right: 0;
+             top: 7px;
+             width: 10px;
+             height: 10px;
+             background: url('../layout/herz-white.svg') no-repeat;
+             transition: opacity 250ms, right 250ms;
+           }
+           &:hover:before {
+             opacity: 1;
+             left: -16px;
+           }
+           &:hover:after {
+             opacity: 1;
+             right: -16px;
+           }
+         }
+       }
+     }
+    .footer-right-wrapper {
+      position: absolute;
+      top: 0;
+      left: 0;
+      color: white;
+      width: 90%;
+      max-width: 1000px;
+      margin-left: 50%;
+      transform: translateX(-50%);
+      .footer-right {
+        float: right;
+        width: 300px;
+      }
+      p {
+        font-size: 13px;
+        &:first-child {
+          border-bottom: 1px solid white;
+          img {
+            margin-bottom: -5px;
+          }
+        }
+        img {
+          width: 130px;
+        }
+      }
+    }
+    .space-underneath {
+      line-height: 3.3em;
+    }
+    .text-to-top {
+      display: block;
+      float: left;
+    }
+  }
+
+  .to-top-button {
+    position: absolute;
+    width: 70px;
+    top: -55px;
+    right: 50%;
+    transform: translateX(50%);
+    cursor: pointer;
+    z-index: 1;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  #footer {
+    height: 660px;
+    .inside .mod_customnav {
+      margin-top: 170px;
+    }
+  }
+}
+
+@media screen and (max-width: $mobile) {
+  #footer {
+    height: 735px;
+    .inside {
+      .footer-right-wrapper {
+        top: initial;
+        bottom: 0;
+        .footer-right {
+          float: none;
+          margin: 0 auto;
+        }
+      }
+      .mod_customnav {
+        margin-top: 100px;
+      }
+      .ce_gallery ul {
+        width: 20%;
+        min-width: 140px;
+        li {
+          width: 45%;
+        }
+      }
+    }
+    .to-top-button {
+      right: 85px;
+    }
+  }
+}

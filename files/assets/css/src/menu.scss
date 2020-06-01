@@ -1,0 +1,111 @@
+@import 'variables';
+
+.menu-head {
+  width: 90%;
+  margin: 10px auto 40px;
+  position: relative;
+  .ce_text {
+    border-bottom: 1px dotted $primary-color;
+  }
+}
+
+.menu-close {
+  position: absolute;
+  top: 24px;
+  right: 0;
+  width: 50px;
+}
+
+.menu-body {
+  background: rgba(20,52,94,1);
+  background-image: linear-gradient(to bottom, rgba(20,52,94,1) 0%, rgba(0,161,215,1) 100%);
+  .mod_form {
+    position: relative;
+    top: -20px;
+    form {
+      width: 90%;
+      margin: 0 auto;
+    }
+    .widget-text {
+      float: left;
+      width: 82%;
+      input {
+        position: relative;
+        z-index: 1;
+        width: 100%;
+        border-radius: 25px;
+        border: none;
+        background: $secondary-color;
+        padding: 5px 15px;
+      }
+    }
+    .widget-submit input {
+      width: 24px;
+      background-color: $primary-color;
+      border-radius: 25px;
+      padding: 3px 7px 3px 31px;
+    }
+  }
+}
+
+.mobile_menu .inner {
+  .mod_customnav, .mod_navigation {
+    position: relative;
+    width: 370px;
+    margin: 0 auto;
+    z-index: 1;
+    li {
+      padding: 8px 0;
+      &:not(:last-child) {
+        border-bottom: 1px solid white;
+      }
+      &.submenu ul {
+        li {
+          border: none;
+          padding: 4px 25px;
+        }
+      }
+      a, strong {
+        text-decoration: none;
+        text-transform: uppercase;
+        color: white;
+        font-size: 12px;
+      }
+    }
+  }
+  .footer-right-wrapper {
+    position: relative;
+    bottom: 0;
+    color: white;
+    width: 90%;
+    max-width: 1000px;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    .footer-right {
+      margin: 0 auto;
+    }
+    p {
+      font-size: 13px;
+      &:first-child {
+        border-bottom: 1px solid white;
+        img {
+          margin-bottom: -5px;
+        }
+      }
+      img {
+        width: 130px;
+      }
+    }
+    .space-underneath {
+      line-height: 3.3em;
+    }
+    .text-to-top {
+      display: block;
+      float: left;
+    }
+  }
+}
+
+.mobile_menu li.submenu_hide > ul {
+  display: block;
+}

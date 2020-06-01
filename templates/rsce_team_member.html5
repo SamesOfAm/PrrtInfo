@@ -1,0 +1,18 @@
+<section class="team-member block">
+
+    <div class="profile-picture">
+        <img src="<?= $this->picture['img']['src'] ?>">
+    </div>
+    <div class="profile-info">
+        <ul>
+            <li><?= $this->position ?></li>
+            <li class="member-name"><?php echo $this->name ?></li>
+        </ul>
+        <ul>
+            <?php if($this->tel1 !== ''): ?> <li>Telefon: <a href="tel:<?= $this->tel1 ?>"><?= $this->tel1 ?></a></li><?php endif; ?>
+            <?php if($this->tel2 !== ''): ?> <li>Telefon: <a href="tel:<?= $this->tel2 ?>"><?= $this->tel2 ?></a></li><?php endif; ?>
+            <?php if($this->fax !== ''): ?> <li>Fax: <a href="tel:<?= $this->fax ?>"><?= $this->fax ?></a></li><?php endif; ?>
+            <?php if($this->email !== ''): ?> <li>E-Mail: <a href="mailto:"<?= $this->email ?>"><?= $this->email ?></a></li><?php endif; ?>
+        </ul>
+    </div>
+</section>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="e594ab90-41e0-4642-b2a1-9b493be242ac" name="Server" url="http://ftp.prrt-info.com">
+        <fileTransfer host="ftp.prrt-info.com" port="21" rootFolder="/prrt-info/contao44">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+          <option name="port" value="21" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
